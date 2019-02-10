@@ -1,0 +1,32 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG",
+          "sourceDir": "lambda/us-east-1_serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa:devices:all:address:country_and_postal_code:read"
+      },
+      {
+        "name": "alexa::profile:given_name:read"
+      },
+      {
+        "name": "alexa::devices:all:geolocation:read"
+      }
+    ],
+    "publishingInformation": {
+      "locales": {
+        "es-ES": {
+          "name": "massimo dutti"
+        }
+      }
+    }
+  }
+}

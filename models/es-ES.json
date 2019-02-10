@@ -1,0 +1,134 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "massimo dutti",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "ayuda sobre este skill",
+            "ayuda",
+            "que funciones tiene",
+            "que puedo hacer "
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "estadoPedido",
+          "slots": [
+            {
+              "name": "order",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "Orden {order}",
+                "Pedido {order}",
+                "El numero de pedido es {order}",
+                "{order}"
+              ]
+            }
+          ],
+          "samples": [
+            "estado pedido",
+            "estado orden {order}",
+            "cual es el estado de mi pedido {order}",
+            "conocer el estado de mi pedido {order}",
+            "conocer estado de mi pedido",
+            "en que estado se encuentra mi pedido",
+            "cuando me llega mi pedido",
+            "estado de mi ultimo pedido",
+            "estado de mi pedido",
+            "estatus",
+            "status",
+            "estado"
+          ]
+        },
+        {
+          "name": "tiendasCercanas",
+          "slots": [],
+          "samples": [
+            "tiendas cerca",
+            "dime cual es la tienda mas cercana",
+            "tienda mas cercana"
+          ]
+        },
+        {
+          "name": "orderReturn",
+          "slots": [],
+          "samples": [
+            "devolver productos",
+            "devolver producto",
+            "devolver ultima orden",
+            "devolver orden",
+            "devolver mi ultimo pedido",
+            "devolver un pedido"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "estadoPedido",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1542312613656"
+          },
+          "slots": [
+            {
+              "name": "order",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1148998608256.61932127211",
+                "elicitation": "Elicit.Slot.1148998608256.61932127211"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1148998608256.61932127211",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor indica el numero de tu pedido."
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1148998608256.61932127211",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "El pedido que quieres consultar es el {order}?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1542312613656",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Quieres conocer el estado de tu ultimo pedido?"
+          }
+        ]
+      }
+    ]
+  }
+}

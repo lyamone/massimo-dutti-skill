@@ -1,0 +1,12 @@
+{
+  "name": "massimo_dutti",
+  "version": "1.0.0",
+  "description": "Massimo Dutti Alexa Skill",
+  "main": "index.js",
+  "scripts": {
+    "dialog":"ask dialog --locale es-ES",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Yamone",
+  "license": "ISC"
+}
