@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "es-ES": {
-            "eTag": "f3a31afec0ba0c91f2397a16591bc18d"
+            "eTag": "92ead922db5a8677a6a428ec2441fa6b"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/us-east-1_serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG",
             "functionName": "serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG",
             "handler": "index.handler",
-            "revisionId": "8d554511-0d43-4858-8408-1b409bed5e13",
+            "revisionId": "e0754694-473d-4bef-a82a-0cf79373c2e9",
             "runtime": "nodejs8.10"
           }
         ]

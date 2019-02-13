@@ -4,10 +4,6 @@ const OrderStatusHandler = {
         && handlerInput.requestEnvelope.request.intent.name === 'estadoPedido';
     },
     async handle(handlerInput) {
-      
-      handlerInput.responseBuilder
-      .speak("Espera mientras lo averiguo") ;
-
 
       const speakOutput = 'El estado del pedido ' + handlerInput.requestEnvelope.request.intent.slots[0].value  + ' es en Transportista. La fecha de llegada es Mañana';
 

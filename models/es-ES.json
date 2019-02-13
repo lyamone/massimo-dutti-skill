@@ -81,10 +81,8 @@
       "intents": [
         {
           "name": "estadoPedido",
-          "confirmationRequired": true,
-          "prompts": {
-            "confirmation": "Confirm.Intent.1542312613656"
-          },
+          "confirmationRequired": false,
+          "prompts": {},
           "slots": [
             {
               "name": "order",
