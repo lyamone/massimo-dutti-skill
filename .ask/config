@@ -23,7 +23,7 @@
             "codeUri": "lambda/us-east-1_serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG",
             "functionName": "serverlessrepo-myMassimoD-alexaskillskitnodejsfact-1UDXLEODSVUKG",
             "handler": "index.handler",
-            "revisionId": "e0754694-473d-4bef-a82a-0cf79373c2e9",
+            "revisionId": "17a4977c-2806-4312-b20f-006e52de0560",
             "runtime": "nodejs8.10"
           }
         ]

@@ -2,12 +2,23 @@ const LaunchRequestHandler = {
     canHandle(handlerInput) {
       return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
       // Executed on 'Open Massimo Dutti'
-      console.log(handlerInput);
-      const speakOutput = 'Hola Lucas, Bienvenido a Massimo Dutti. En que puedo ayudarte?';
-  
-      return handlerInput.responseBuilder
+      const attributesManager =  handlerInput.attributesManager;
+      const responseBuilder = handlerInput.responseBuilder;
+      const speakOutput = 'Bienvenido a Massimo Dutti!';
+      const attributes = await attributesManager.getPersistentAttributes() || {};
+
+      if(Object.keys(attributes).length==0){
+        attributes.nameValue= 'pedro';
+        attributesManager.setPersistentAttributes(attributes);
+        const result = await attributesManager.savePersistentAttributes();
+      } else {
+         speakOutput = 'Hola de nuevo . En que puedo ayudarte hoy';
+      }
+      
+      
+      return responseBuilder
         .speak(speakOutput) // The text passed to speak, is what Alexa will say.
         .getResponse();
     },

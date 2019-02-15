@@ -4,9 +4,12 @@
   "description": "Massimo Dutti Alexa Skill",
   "main": "index.js",
   "scripts": {
-    "dialog":"ask dialog --locale es-ES",
+    "dialog": "ask dialog --locale es-ES",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Yamone",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.3.0"
+  }
 }

@@ -1,4 +1,4 @@
-const Alexa = require('ask-sdk-core');
+const Alexa = require('ask-sdk');
 
 // Generic Handlers
 const LaunchRequestHandler = require('./handlers/launch.handler');
@@ -12,7 +12,7 @@ const OrderStatusHandler = require('./handlers/order-status.handler');
 const OrderReturnHandler = require('./handlers/order-return.handler');
 
 
-const skillBuilder = Alexa.SkillBuilders.custom();
+const skillBuilder = Alexa.SkillBuilders.standard();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
@@ -25,5 +25,6 @@ exports.handler = skillBuilder
     SessionEndedRequestHandler,
   )
   .addErrorHandlers(ErrorHandler)
-  . withApiClient(new Alexa.DefaultApiClient())
+  .withTableName('md-data')
+  .withAutoCreateTable(true)
   .lambda();

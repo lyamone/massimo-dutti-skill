@@ -22,7 +22,7 @@ const CloserStoreHandler = {
       }
   
       // const { deviceId } = requestEnvelope.context.System.device;
-      // const deviceAddressServiceClient = serviceClientFactory.getDeviceAddressServiceClient();
+      // const deviceAddressServiceClient = serviceClientFactory.getDevi  ceAddressServiceClient();
       // const address = await deviceAddressServiceClient.getFullAddress(deviceId);
       
       // console.log(address);
