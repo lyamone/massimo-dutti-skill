@@ -6,13 +6,12 @@ const LaunchRequestHandler = {
       // Executed on 'Open Massimo Dutti'
       const attributesManager =  handlerInput.attributesManager;
       const responseBuilder = handlerInput.responseBuilder;
-      const speakOutput = 'Bienvenido a Massimo Dutti!';
-      const attributes = await attributesManager.getPersistentAttributes() || {};
-
+      var speakOutput = 'Bienvenido a Massimo Dutti!';
+      var attributes = await attributesManager.getPersistentAttributes() || {};
       if(Object.keys(attributes).length==0){
         attributes.nameValue= 'pedro';
         attributesManager.setPersistentAttributes(attributes);
-        const result = await attributesManager.savePersistentAttributes();
+        await attributesManager.savePersistentAttributes();
       } else {
          speakOutput = 'Hola de nuevo . En que puedo ayudarte hoy';
       }
